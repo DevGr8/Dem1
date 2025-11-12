@@ -1,0 +1,119 @@
+/* --- Global Reset & Body --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* This flex setup ensures the hero section fills the remaining height */
+    height: 100vh; /* Use 100% of the viewport height */ 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevents scrolling */ 
+}
+
+/* --- 1. Navbar Styling --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    /* A subtle shadow like the sample */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem; /* Space between links */
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.username {
+    font-weight: bold;
+    color: #4a55c7; /* Matching the sample's blue/purple */
+}
+
+/* --- 2. Hero Section Styling --- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    /* flex-grow: 1 makes this section take all available space */
+    flex-grow: 1; 
+    width: 100%;
+}
+
+/* --- Left Div --- */
+.hero-left {
+    flex: 1; /* Takes up half the space */
+    padding-right: 2rem;
+}
+
+.hero-left h1 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #222;
+}
+
+.hero-left .highlight {
+    color: #007bff; /* Blue highlight color */
+}
+
+.hero-left p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 1.5rem 0;
+    line-height: 1.6;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Right Div --- */
+.hero-right {
+    flex: 1; /* Takes up the other half */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-right img {
+    max-width: 80%; /* Scales image down */
+    height: auto;
+}
